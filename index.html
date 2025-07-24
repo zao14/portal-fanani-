@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal Ilmiah Dr. A.F. Fanani, MAP</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet" />
+  <script defer src="script.js"></script>
+  <style>
+    .rahasia-top-link {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #ffd700;
+      color: #000;
+      padding: 6px 15px;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+      transition: background-color 0.3s ease;
+    }
+    .rahasia-top-link:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .secret-button {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #ffd700;
+      color: #000;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      z-index: 1000;
+      transition: 0.3s ease;
+    }
+    .secret-button:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .secret-trigger {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      opacity: 0;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <div class="logo">
+        <img src="Profil Fanani.jpeg" alt="Foto Fanani" class="logo-img">
+        <span>Dr. A.F. Fanani, MAP</span>
+      </div>
+
+      <!-- Link Rahasia di atas tengah -->
+     
+
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Beranda</a></li>
+          <li><a href="about.html">Tentang</a></li>
+          <li><a href="publikasi.html">Publikasi</a></li>
+          <li><a href="buku.html">Buku</a></li>
+          <li><a href="materi.html">Materi</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-section slide">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Selamat Datang di Portal Ilmiah</h1>
+        <p>
+          Menampilkan karya ilmiah, buku, pengajaran, dan pengabdian Dr. Fanani dalam dunia akademik.
+        </p>
+        <a href="publikasi.html" class="btn">Lihat Publikasi</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trigger Rahasia di pojok kiri bawah -->
+  <div class="secret-trigger" onclick="showSecretButton()"></div>
+
+  <!-- Tombol Rahasia tersembunyi -->
+  <a href="rahasia.html" class="secret-button" id="secretBtn">
+    🔒 Rahasia
+  </a>
+
+  <script>
+    function showSecretButton() {
+      document.getElementById("secretBtn").style.display = "block";
+    }
+  </script>
+</body>
+</html>
